@@ -1,0 +1,17 @@
+type AuthorType { 
+  name: String,
+  books: [BookType]!
+}
+
+
+type BookType { 
+  title(lang: String): String!
+  isbn: String
+  authors: [AuthorType]!
+}
+
+
+type Query {
+  author(id: Int!): AuthorType! 
+}
+
